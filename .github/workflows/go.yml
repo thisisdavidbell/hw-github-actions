@@ -18,8 +18,15 @@ jobs:
       with:
         go-version: 1.16
 
-    - name: Build
-      run: go build -v ./...
-
-    - name: Test
+    - name: Unit Tests
       run: go test -v ./...
+
+    - name: Build main
+      run: go build run-hw
+  
+    - name: Run main
+      run: ./run-hw
+
+    - name: Test main
+      run: ./test-main.sh
+
