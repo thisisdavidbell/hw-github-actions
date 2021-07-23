@@ -22,7 +22,7 @@ jobs:
       run: go test -v ./...
 
     - name: Build main
-      run: go build run-hw
+      run: go build run-hw.go
   
     - name: Run main
       run: ./run-hw
